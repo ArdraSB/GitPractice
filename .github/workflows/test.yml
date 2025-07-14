@@ -4,15 +4,21 @@ on:
   push:
     branches: [main]
 
+env:
+  name: "gloria"
+
 jobs:
+
+env:
+  var: "hello"
+
+
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Your HTML files are in the root
+      - name: print values 
+        run: |
+          echo "haii $name"
+          echo "haii $var"
+    
+        
