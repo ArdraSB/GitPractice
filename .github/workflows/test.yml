@@ -5,20 +5,19 @@ on:
     branches: [main]
 
 env:
-  name: "gloria"
+  name: "gloria"   # Global environment variable
 
 jobs:
-
-env:
-  var: "hello"
-
-
   deploy:
     runs-on: ubuntu-latest
+    env:
+      var: "hello"   # Job-level environment variable
     steps:
-      - name: print values 
+      - name: Print values
         run: |
           echo "haii $name"
           echo "haii $var"
+
+      
     
         
