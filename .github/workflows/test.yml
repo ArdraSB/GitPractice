@@ -13,11 +13,15 @@ jobs:
     env:
       var: "hello"   # Job-level environment variable
     steps:
-      - name: Print values
+      - name: Print values (Deploy Job)
         run: |
           echo "haii $name"
           echo "haii $var"
 
-      
-    
-        
+  print-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name (Print-Env Job)
+        run: echo "Hello from $name"
+        env:
+          name: "sandra"  # Step-level environment variable
