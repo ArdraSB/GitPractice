@@ -1,0 +1,7 @@
+name: keep Secrets
+
+on: workflow_dispatch
+
+
+env:
+  MY_SECRET: "this is a secret"
