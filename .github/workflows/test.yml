@@ -25,3 +25,10 @@ jobs:
         run: echo "Hello from $name"
         env:
           name: "sandra"  # Step-level environment variable
+  
+  job3:
+    runs-on: windows-latest
+    steps:
+      - name: print default name (Windows Job)
+        run: env
+        
